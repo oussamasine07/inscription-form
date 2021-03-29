@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--
+ * HTML-Sheets-of-Paper (https://github.com/delight-im/HTML-Sheets-of-Paper)
+ * Copyright (c) delight.im (https://www.delight.im/)
+ * Licensed under the MIT License (https://opensource.org/licenses/MIT)
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Emulating real sheets of paper in web documents (using HTML and CSS)">
+		<title>Sheets of Paper</title>
+		<link rel="stylesheet" type="text/css" href="css/sheets-of-paper-a4.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/sheets-of-paper-a3.css"> -->
+	</head>
+	<body class="document">
+		<div class="page">
+			<!-- header of the paper starts -->
+			<div class="header">
+				<div class="logo">
+					<img src="./img/logo.png" alt="">
+				</div>
+				<div class="main-area">
+					<h1><span>diwan consworld</span></h1>
+					<h3>formation pratique</h3>
+					<h4>fiche d'inscription</h4>
+				</div>
+				<div class="side-area">
+					<div class="side-part">
+						<h3>centre de formation<br> <span>casablanca</span></h3>
+					</div>
+					<div class="side-part last">
+						<p>le 20/03/2021</p>
+					</div>
+				</div>
+			</div>
+			<!-- header of the paper ends -->
+
+			<!-- identification de stagiaire starts -->
+			<div class="identification_de_stagiaire border-and-padding">
+				<!-- <h3 class="heading-section">Situation Actuelle</h3> -->
+				<div class="side-photo">
+					<div class="profile-photo">
+						<img src="./uploads/users/files/<%= globaleInfo.nom %>_<%= globaleInfo.prenom %>/<%= globaleInfo.stagiaire_photo %>">
+					</div>
+					<div class="id">
+						identifien N°: <%= globaleInfo.id %>
+					</div>
+				</div>
+
+				<div class="main-info">
+					<div class="info-wapper">
+						<div class="left">Nom et Prénom</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.nom %> <%= globaleInfo.prenom %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Email</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.email %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Telephone Personnelle</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.tele_portable %></div>
+					</div>
+					<% if ( globaleInfo.tele_domicile != "" ) { %>
+						<div class="info-wapper">
+							<div class="left">Telephone Domicile</div>
+							<div class="column">:</div>
+							<div class="right"><%= globaleInfo.tele_domicile %></div>
+						</div>
+					<% } %>
+					<div class="info-wapper">
+						<div class="left">Adress</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.adress_personnelle %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Code Postal</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.codepostal_personnelle %></div>
+					</div>
+					<% if ( globaleInfo.adress_domicile != "" ) { %>
+						<div class="info-wapper">
+							<div class="left">Adress domicile</div>
+							<div class="column">:</div>
+							<div class="right"><%= globaleInfo.adress_domicile %></div>
+						</div>
+					<% } %>
+					<% if ( globaleInfo.adress_domicile != "" ) { %>
+						<div class="info-wapper">
+							<div class="left">Code Postal</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.adress_domicile %></div>
+						</div>
+					<% } %>
+					<div class="info-wapper">
+						<div class="left">Date de Naissance</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.date_de_naissance %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Lieu de Naissance</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.lieu_de_naissance %></div>
+					</div>
+				</div>
+			</div>
+			<!-- identification de stagiaire ends -->
+
+			<!-- situation actuelle starts -->
+			<% if ( globaleInfo.situation_actuelle.situation == "etudiant" || globaleInfo.situation_actuelle.situation == "etudiante" ) { %>
+				<div class="situation_actuelle border-and-padding">
+					<h3 class="heading-section">Situation Actuelle</h3>
+					<div class="info-wapper">
+						<div class="left">Situation Actuelle</div>
+						<div class="column">:</div>
+						<div style="text-transform: capitalize;" class="right"><%= globaleInfo.situation_actuelle.situation %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Specialité</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.situation_actuelle.specialite %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Etablissement</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.situation_actuelle.etablissement %></div>
+					</div>
+				</div>
+			<% } else if (globaleInfo.situation_actuelle.situation == "salarier") { %>
+				<div class="situation_actuelle border-and-padding salarier">
+					<h3 class="heading-section">Situation Actuelle</h3>
+					<div class="info-wapper">
+						<div class="left">Situation Actuelle</div>
+						<div class="column">:</div>
+						<div style="text-transform: capitalize;" class="right"><%= globaleInfo.situation_actuelle.situation %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Contrat</div>
+						<div class="column">:</div>
+						<div style="text-transform: uppercase;" class="right"><%= globaleInfo.situation_actuelle.contract %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Société</div>
+						<div class="column">:</div>
+						<div style="text-transform: capitalize;" class="right"><%= globaleInfo.situation_actuelle.societe %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Secteur Econnomique</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.situation_actuelle.activite %></div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">Post Occupée</div>
+						<div class="column">:</div>
+						<div class="right"><%= globaleInfo.situation_actuelle.post_occupee %></div>
+					</div>
+				</div>
+			<% } else if ( globaleInfo.situation_actuelle == "recheche_d'emploi" ) { %>
+				<div class="situation_actuelle border-and-padding recherch">
+					<h3 class="heading-section">Situation Actuelle</h3>
+					<div class="info-wapper">
+						<div class="left">Situation Actuelle</div>
+						<div class="column">:</div>
+						<div class="right" style="text-transform: capitalize;"><%= globaleInfo.situation_actuelle %></div>
+					</div>
+				</div>
+			<% } else if ( globaleInfo.situation_actuelle.situation == "autre" ) { %>
+				<div class="situation_actuelle border-and-padding autre">
+					<h3 class="heading-section">Situation Actuelle</h3>
+					<div class="info-wapper">
+						<div class="left">Situation Actuelle</div>
+						<div class="column">:</div>
+						<div class="right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptatem</div>
+					</div>
+				</div>
+			<% } %>
+			<!-- situation actuelle ends -->
+		
+			<!-- diplom et formations starts -->
+			<div class="diploms border-and-padding">
+				<h3 class="heading-section">diploms et formation</h3>
+				<% globaleInfo.diploms.forEach(diplom => { %>
+					<div class="spacing">
+						<div class="info-wapper">
+							<div class="left">diplom</div>
+							<div class="column">:</div>
+							<div class="right"><%= diplom.diplom %></div>
+						</div>
+						<div class="info-wapper">
+							<div class="left">Etablissement</div>
+							<div class="column">:</div>
+							<div class="right"><%= diplom.institution %></div>
+						</div>
+						<div class="info-wapper">
+							<div class="left">Anne de optention</div>
+							<div class="column">:</div>
+							<div class="right"><%= diplom.anne_de_obtention %></div>
+						</div>
+					</div>
+				<% }); %>
+			</div>
+			<!-- diplom et formations ends -->
+		
+			<!-- experiencs professionnelles starts -->
+			<div class="experiencs_professionnelles border-and-padding">
+				<h3 class="heading-section">experiences professionnelle</h3>
+				<% globaleInfo.experiences.forEach(experience => { %>
+					<div class="spacing">
+						<div class="info-wapper">
+							<div class="left">de <%= experience.debut_de_stage %> <br> au <%= experience.fin_de_stage %></div>
+							<div class="column">:</div>
+							<div class="right">
+								<ul>
+									<li> <span>Ste</span> <%= experience.nom_de_ste %></li>
+									<li> <span>Experience de</span> <%= experience.experience %></li>
+									<li> <span>secteur</span> <%= experience.secteur %></li>
+									<li><span>deparement</span> <%= experience.departement %></li>
+									<li> <span>post</span> <%= experience.fonction %></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				<% }); %>
+			</div>
+			<!-- experiencs professionnelles ends -->
+			
+			<!-- centre d'interet starts -->
+			<div class="center_de_interet border-and-padding">
+				<h3 class="heading-section">centre d'interet</h3>
+				<div class="info-wapper">
+					<div class="left">centre d'interet</div>
+					<div class="column">:</div>
+					<div class="right">
+						<%= globaleInfo.centre_de_interet %>
+					</div>
+				</div>
+			</div>
+			<!-- centre d'interet ends -->
+
+			<!-- connaissance general starts -->
+			<div class="connaissance_general border-and-padding">
+				<h3 class="heading-section">connaissance général</h3>
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="main-column">connaissence en:</th>
+							<th class="regular-column">base</th>
+							<th class="regular-column">moyenne</th>
+							<th class="regular-column">bonne</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="main-column">Juridique (Société)</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.juridique == "base" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.juridique == "moyenne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.juridique == "bonne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+						</tr>
+						<tr>
+							<td class="main-column">Social</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.social == "base" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.social == "moyenne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.social == "bonne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+						</tr>
+						<tr>
+							<td class="main-column">Finance & Comptabilité</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.finance_et_comptabilite == "base" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.finance_et_comptabilite == "moyenne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.finance_et_comptabilite == "bonne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+						</tr>
+						<tr>
+							<td class="main-column">Audit & Controle Interne</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.audit_et_controle_intern == "base" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.audit_et_controle_intern == "moyenne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.audit_et_controle_intern == "bonne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+						</tr>
+						<tr>
+							<td class="main-column">Fiscalité</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.fiscalite == "base" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.fiscalite == "moyenne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.fiscalite == "bonne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+						</tr>
+						<tr>
+							<td class="main-column">Mangmenet & commercial</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.managment_et_commercial == "base" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.managment_et_commercial == "moyenne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+							<td class="regular-column">
+								<% if ( globaleInfo.connaissance_general.managment_et_commercial == "bonne" ) { %>
+									<img class="img-checked" src="img/tick.svg">
+								<% } %>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- connaissance general ends -->
+		
+			<!-- .informatique starts -->
+			<div class="informatique border-and-padding">
+				<h3 class="heading-section">informatique</h3>
+
+				<div class="spacing">
+					<div class="info-wapper">
+						<div class="left">ordinateure</div>
+						<div class="column">:</div>
+						<div class="right">
+							<% if (globaleInfo.connaissance_informatique_.ordinateur == "oui") { %>
+								disponible
+							<% } else { %>
+								non-disponible
+							<% } %>
+						</div>
+					</div>
+					<div class="info-wapper">
+						<div class="left">internet</div>
+						<div class="column">:</div>
+						<div style="text-transform: uppercase;" class="right">
+							<%= globaleInfo.connaissance_informatique_.type_de_internet %>
+						</div>
+					</div>
+					<div class="spacing">
+						<div class="info-wapper">
+							<div class="left">connaissance informatique</div>
+							<div class="column">:</div>
+							<div class="right">
+								<ul>
+									<li><%= globaleInfo.connaissance_informatique_.connaissance_informatique %></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .informatique ends -->
+		</div>
+		<div class="footer-download">
+			<div class="footer-container">
+				<p>merci de télécharger l'imprimer</p>
+				<a href="/pdf" class="download-file"> télécharger </a>
+			</div>
+			<a href="/inscription" class="back-home"> retour à la page d'accueil </a>
+		</div>
+		<script type="text/javascript">
+		// window.print();
+		</script>
+	</body>
+</html>

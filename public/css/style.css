@@ -1,0 +1,476 @@
+/* --------------- GLOBAL STYLING ---------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-blue: #0f3a61;
+    --dark-gray: #393e41;
+    --light-gray: #e7e5df;
+    --main-red: #ec4646;
+    --title-main-font: "Playfair Display";
+    --title-secondary-font: 'PT Sans', sans-serif;
+    --text-normal-font: 'Roboto Condensed', sans-serif;
+}
+
+html { scroll-behavior: smooth;}
+
+body {
+    font-family: var(--text-normal-font);
+    position: relative;
+}
+
+a { text-decoration: none}
+ul { list-style: none;}
+
+/* ----------------- FRAMEWORK ---------------- */
+
+.heading-main {
+    font-size: 2rem;
+    font-family: var(--title-main-font);
+    color: var(--dark-blue);
+    text-transform: capitalize;
+}
+
+.heading-secondary {
+    font-size: 1.50rem;
+    font-family: var(--title-secondary-font);
+    color: var(--dark-blue);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.content-text {
+    font-size: 1.2rem;
+    font-family: var(--text-normal-font);
+    color: var(--dark-gray);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.main-btn {
+    padding: 15px 30px;
+    display: inline-block;
+    background-color: var(--main-red);
+    border: 2px solid var(--main-red);
+    border-radius: 30px;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+    transition: all .5s;
+}
+
+.main-btn:hover {
+    background: #ffffff;
+}
+
+.py {
+    padding: 50px 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.margin-bottom-25 { margin-bottom: 30px; }
+
+.already-warning {
+    width: 100%;
+    border: 2px solid var(--main-red);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(236, 70, 70, .75);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    transition: all .5s;
+}
+
+.close-warning {
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------- INSCRIPTION PAGE STYLING ---------------------- */
+/* ------------------------------------------------------------------------- */
+.container-formation {
+    width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: var(--light-gray);
+}
+
+.inscription-btn-box .sign-up-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+    color: var(--light-gray);
+    font-size: 1.5rem;
+    font-family: var(--text-normal-font);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.inscription-btn-box .sign-up-btn:focus {
+    outline: none;
+}
+
+.inscription-btn-box .sign-up-btn.already-sign-up {
+    margin-right: 15px;
+    background: var(--dark-blue);
+}
+
+.inscription-btn-box .sign-up-btn.sign-me-up {
+    background: var(--main-red);
+}
+
+.sign-up-section .new-sign-up-form,
+.sign-up-section .already-sign-up-form {
+    display: block;
+    opacity: 1;
+    transition: all .5s;
+}
+
+.sign-up-section .new-sign-up-form {
+    display: block;
+}
+
+.sign-up-section .new-sign-up-form.valider_inscription { display: block; opacity: 1;}
+
+/* .sign-up-section .already-sign-up-form { display: none;} */
+
+.form-border {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1.5px solid var(--dark-blue);
+    border-radius: 10px;
+}
+
+.form-border .heading-title-formSignup {
+    font-size: 1.30rem;
+    font-family: var(--title-secondary-font);
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.form-border .row-input-3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-border .row-input-3 .input-group { width: 330px; }
+
+.form-border .row-input-3 .input-group:last-child {
+    width: 150px;
+}
+
+.form-border .row-input-3 .input-group:last-child .input-form { width: 100%;}
+
+.form-border .row-input-3 .input-group label { 
+    display: block;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+}
+
+.form-border .row-input-3 .input-group .input-form {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    background-color: transparent;
+    border: 1px solid var(--dark-blue);
+    border-radius: 8px;    
+}
+
+.input-form:focus { outline: none; }
+
+.input-form {
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    background-color: transparent;
+    border: 1px solid var(--dark-blue);
+    border-radius: 8px; 
+    position: relative;   
+}
+
+.input-form .upload {
+    padding: 5px 20px;
+    height: 30px;
+    font-size: 1rem;
+    color: var(--light-gray);
+    text-transform: capitalize;
+    border: 1px solid var(--dark-blue);
+    border-radius: 8px;
+    background: var(--dark-blue);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.input-form .upload:focus { outline: none;}
+
+.input-form.is-invalid {
+    border: 2px solid var(--main-red);
+}
+
+.feed-back { color: var(--main-red); margin-top: 5px;}
+
+.form-border .row-options {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.label-name {
+    display: block;
+    font-size: 1.2rem;
+    width: 100%;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+    margin-bottom: 3px;
+}
+
+.label-name-option { 
+    text-align: right;
+    font-size: 1.2rem;
+    width: 330px;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+    margin-right: 10px;
+}
+
+.label-right-align {
+    text-align: right;
+    font-size: 1.2rem;
+    /* width: 330px; */
+    text-transform: capitalize;
+    color: var(--dark-blue);
+    margin-right: 10px;
+    align-self: flex-end;
+}
+
+.label-checkbox {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+    margin-right: 10px;
+}
+
+.textarea-input {
+    border: 1px solid var(--dark-blue);
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    background: transparent;
+    color: var(--dark-blue);
+}
+.textarea-input:focus { outline: none;}
+
+.add-other {
+    width: 280px;
+    padding: 8px 20px;
+    border: 1px solid var(--dark-blue);
+    border-radius: 8px;
+    background: var(--dark-blue);
+    color: var(--light-gray);
+    text-transform: capitalize;
+    font-size: 1rem;
+    transition: all .5s;
+}
+
+.add-other:focus {
+    outline: none;
+}
+
+.add-other:hover { 
+    background-color: #fff;
+    color: var(--dark-blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-border .row-options .select {
+    position: relative;
+    width: 480px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.form-border .row-options .select select {
+    padding: 10px 20px 10px 40px;
+    width: 70%;
+    border: 0;
+    border-radius: 8px;
+    background: var(--dark-blue);
+    color: var(--light-gray);
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+}
+
+.form-border .row-options .select select:focus { outline: none;}
+
+.form-border .row-options .select .arrow {
+    display: block;
+    width: 30px;
+    height: 37px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-border .row-options .select .arrow:before {
+    content : "";
+    width: 0;
+    height: 0;
+    border-top: 7px solid var(--light-gray);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid transparent;
+    position: absolute;
+    top: 45%;
+    left: 70%;
+    transform: translateX(-50%);
+    z-index: 1090
+}
+
+.input-btns {
+    width: 250px;
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.prev {
+    border: 1px solid var(--main-red);
+    background: var(--main-red);
+}
+
+.next {
+    border: 1px solid var(--dark-blue);
+    background: var(--dark-blue);
+}
+
+.input-form-btn {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: var(--light-gray);
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.disabled { position: relative;}
+.disable-btn {
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.form-border .row-options .select:focus { outline: none;}
+
+.form-border .row-input-1 {
+    width: 65%;
+    margin: 15px auto 0;
+}
+
+.form-border .row-input-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+
+.form-border .row-input-2 .input-group {
+    width: 49%;
+}
+
+.form-border .row-input-2-1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto 0;
+}
+
+.form-border .row-input-2-1 .larg-input { width: 74%; }
+
+.form-border .row-input-2-1 .small-input {
+    width: 24%;
+}
+
+.input-check {
+    margin-left: 20px;
+    display: flex;
+}
+
+.input-check .input-group-checkbox {
+    margin-right: 40px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    text-align: left;
+}
+
+.table thead tr th {
+    padding: 10px 20px;
+    background-color: var(--dark-blue);
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.table thead tr .main-column {
+    width: 70%;
+}
+
+.table tbody tr .main-column,
+.table tbody tr .regular-column {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--dark-blue);
+}
+
+.table tbody tr .main-column {  
+    font-size: 1rem;
+    color: var(--dark-blue);
+}
+
+.table tbody tr .regular-column { text-align: center; }
+
+.diploma-container,
+.experience-container { margin-bottom: 40px;}

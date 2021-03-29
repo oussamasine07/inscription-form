@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ee78fb64a1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display:wght@400;500;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>inscription</title>
+</head>
+<body>
+
+    <!-- services presentation starts -->
+    <section class="formations-presentation py">
+        <div class="sign-up-section container-formation padding-20">
+            <h1 class="heading-main">inscrivez vous</h1>
+            <div class="inscription-btn-box padding-40">
+                <h1 class="heading-secondary">vous êtes-vous déjà inscrit?</h1>
+                <button class="sign-up-btn already-sign-up">oui, déja inscrit</button>
+                <button class="sign-up-btn sign-me-up">non, inscrivez mois</button>
+
+                <!-- <form action="/inscription" method="POST">
+                    <input type="text" name="firstname">  
+                    <input type="text" name="lastname">  
+                    <input type="submit" value="submit">  
+                </form> -->
+
+                <div class="already-sign-up-form" id="old-user">
+                    <form>
+                        <div class="form-border">
+                            <h2 class="heading-title-formSignup">déja inscrit</h2>
+                            <div class="row-input-3">
+                                <div class="input-group">
+                                    <label class="label-name" for="name">nom:</label>
+                                    <input type="text" placeholder="Nom" name="lastname" class="input-form">
+                                </div>
+                                <div class="input-group">
+                                    <label class="label-name" for="name">prénom:</label>
+                                    <input type="text" placeholder="Prénom" name="firstname" class="input-form">
+                                </div>
+                                <div class="input-group">
+                                    <label class="label-name" for="id">ID: <label>
+                                    <input type="text" placeholder="ID" name="id" class="input-form">
+                                </div>
+                            </div>
+                            <div class="row-options">
+                                <label class="label-name-option" for="formations">formation en:</label>
+                                <div class="select">
+                                    <select name="formation">
+                                        <option value="comptabilité">comptabilité</option>
+                                        <option value="fiscalité">fiscalité</option>
+                                        <option value="audit">audit</option>
+                                        <option value="import-expert">import/expert</option>
+                                        <option value="diagnostique financier">diagnostique financier</option>
+                                    </select>
+                                    <span class="arrow"></span>
+                                </div>
+                            </div>
+                            <div class="row-options">
+                                <label class="label-name-option" for="formations">ville :</label>
+                                <div class="select">
+                                    <select name="formation">
+                                        <option value="comptabilité">beni mellal</option>
+                                        <option value="casablanca">casablanca</option>
+                                        <option value="tanger">tanger</option>
+                                    </select>
+                                    <span class="arrow"></span>
+                                </div>
+                            </div>
+                            <input type="submit" class="register" value="inscrivez-moi à ce cours">
+                        </div>
+                    </form>
+                </div>
+
+
+                <!-- new sign up form starts -->
+                <div class="new-sign-up-form" id="new-user">
+
+                    <form action="/inscription" method="POST">
+                        <div class="form-border">
+                            <h2 class="heading-title-formSignup">nouvelle inscription</h2>
+                            <div class="row-options">
+                                <label class="label-name-option" for="formations">* formation en:</label>
+                                <div class="select">
+                                    <select name="formation">
+                                        <option value="comptabilité">comptabilité</option>
+                                        <option value="fiscalité">fiscalité</option>
+                                        <option value="audit">audit</option>
+                                        <option value="import-expert">import/expert</option>
+                                        <option value="diagnostique financier">diagnostique financier</option>
+                                    </select>
+                                    <span class="arrow"></span>
+                                </div>
+                            </div>
+                            <div class="row-options">
+                                <label class="label-name-option" for="formations">* ville :</label>
+                                <div class="select">
+                                    <select name="ville">
+                                        <option value="beni mellal">beni mellal</option>
+                                        <option value="casablanca">casablanca</option>
+                                        <option value="tanger">tanger</option>
+                                    </select>
+                                    <span class="arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-border">
+                            <h2 class="heading-title-formSignup">identification du stagiaire</h2>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-name" for="name">* nom:</label>
+                                    <input type="text" placeholder="Nom" name="lastname" class="input-form">
+                                </div>
+                                <div class="input-group">
+                                    <label class="label-name" for="lastname">* prénom:</label>
+                                    <input type="text" placeholder="Prénom" name="firstname" class="input-form">
+                                </div>
+                            </div>
+
+                            <div class="row-input-1">
+                                <div class="input-group">
+                                    <label class="label-name" for="email">* email:</label>
+                                    <input type="email" placeholder="Nom" name="email" class="input-form">
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-name" for="phone">* tele portable :</label>
+                                    <input type="text" placeholder="Tel Portable" name="phoneone" class="input-form">
+                                </div>
+                                <div class="input-group">
+                                    <label class="label-name" for="phonedomicile">* tele domicile:</label>
+                                    <input type="text" placeholder="Tel Domicile" name="phonedomicile" class="input-form">
+                                </div>
+                            </div>
+
+                            <div class="row-input-2-1">
+                                <div class="input-group larg-input">
+                                    <label class="label-name" for="adressone">* adress: </label>
+                                    <input type="text" placeholder="Adress" name="adressone" class="input-form">
+                                </div>
+                                <div class="input-group small-input">
+                                    <label class="label-name" for="codepostalone">* code postal:</label>
+                                    <input type="number" placeholder="code postal" name="codepostalone" class="input-form">
+                                </div>
+                            </div>
+
+                            <div class="row-input-2-1">
+                                <div class="input-group larg-input">
+                                    <label class="label-name" for="adresstwo">* adress: </label>
+                                    <input type="text" placeholder="Adress" name="adresstwo" class="input-form">
+                                </div>
+                                <div class="input-group small-input">
+                                    <label class="label-name" for="codepostaltwo">* code postal:</label>
+                                    <input type="number" placeholder="Code postal" name="codepostaltwo" class="input-form">
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-name" for="birthdate">* date de naissance:</label>
+                                    <input type="text" placeholder="Date De Naissance:" name="birthdate" class="input-form">
+                                </div>
+                                <div class="input-group">
+                                    <label class="label-name" for="placeofbirth">* lieu de naissance:</label>
+                                    <input type="text" placeholder="Lieu de naissance" name="placeofbirth" class="input-form">
+                                </div>
+                            </div>
+
+                            <div class="row-input-checkbox" style="margin-top: 10px;">
+                                <div class="label-name">* sex:</div>
+                                <div class="input-check">
+                                    <div class="input-group-checkbox">
+                                        <label class="label-checkbox" for="masculin">masculin</label>
+                                        <input type="checkbox" name="masculin" class="chechbox-input">
+                                    </div>
+                                    <div class="input-group-checkbox">
+                                        <label class="label-checkbox" for="feminin">feminin</label>
+                                        <input type="checkbox" name="feminin" class="chechbox-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-name" for="photo">* ajouter une photo:</label>
+                                    <input type="file" hidden="true" placeholder="Date De Naissance:" name="photo" class="input-form">
+                                    <div class="input-form">
+                                        <button class="upload">photo</button>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label class="label-name" for="cv">* ajouter votre CV:</label>
+                                    <input type="file" hidden="true" placeholder="Lieu de naissance" name="cv" class="input-form">
+                                    <div class="input-form">
+                                        <button class="upload">CV</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-border">
+                            <h2 class="heading-title-formSignup">situation actuelle</h2>
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <input type="checkbox" name="etudiant" class="chechbox-input">
+                                    <label class="label-checkbox" for="etude">etudiant(e) ? specifier votre etude:</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" placeholder="etude" name="etude" class="input-form">
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <input type="checkbox" name="salarier" class="chechbox-input">
+                                    <label class="label-checkbox" for="salarier">salarie(e) ? type de contrat:</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="checkbox" name="contract" value="cdi" class="chechbox-input">
+                                    <label class="label-checkbox" for="cdi">CDI</label>
+                                    <input type="checkbox" name="contract" class="chechbox-input" checked="true" value="cdd">
+                                    <label class="label-checkbox" for="cdd">CDD</label>
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-checkbox" for="activite">secteur d'activité:</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" placeholder="activite" name="activite" class="input-form">
+                                </div>
+                            </div>
+
+                            <div class="row-input-1">
+                                <div class="input-group">
+                                    <input type="checkbox" name="recherchedemploit" class="chechbox-input">
+                                    <label class="label-checkbox" for="recherchedemploit">recherch d'emplois:</label>
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <input type="checkbox" name="autre" class="chechbox-input">
+                                    <label class="label-checkbox" for="autre">autre, préciser:</label>
+                                </div>
+                                <div class="input-group">
+                                    <textarea class="textarea-input" name="otherJob"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- DIPLOM ET FORMATIONS STARTS -->
+                        <div class="form-border">
+                            <h2 class="heading-title-formSignup">diploms et formations</h2>
+                            
+                            <div id="diploma">
+                                <div class="diploma-container" id="diploma-container">
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox" for="diplom">diplom:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="diplom" name="diplom" class="input-form">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox" for="year-of-obtaining">année d'obtention:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="année" name="year-of-obtaining" class="input-form">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-right-align">si vous avez d'autre diploms, merci d'ajouter</label>
+                                </div>
+                                <div class="input-group">
+                                    <button class="add-other" id="add-diploma">ajouter un autre diplom</button>
+                                </div>
+                            </div>
+                            <div class="row-input-checkbox" style="margin-top: 10px;">
+                                <div class="label-name">* experiences proffessionnelle:</div>
+                                <div class="input-check">
+                                    <div class="input-group-checkbox">
+                                        <label class="label-checkbox" for="stage">stage</label>
+                                        <input type="checkbox" name="stage" class="chechbox-input">
+                                    </div>
+                                    <div class="input-group-checkbox">
+                                        <label class="label-checkbox" for="emploi">emplois</label>
+                                        <input type="checkbox" name="emploi" class="chechbox-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="experience">
+                                <div class="experience-container" id="experience-container">
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox">nom de ste ou entreprise:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Ste ou Entreprise" name="name-of-company" class="input-form">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox">secteur:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="secteur" name="sector" class="input-form">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox" for="departement">departement:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="departement" name="departement" class="input-form">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox" for="fonction">fonction:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="fonction" name="fonction" class="input-form">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-right-align">si vous avez d'autre experiances, merci d'ajouter</label>
+                                </div>
+                                <div class="input-group">
+                                    <button class="add-other" id="add-experience">ajouter une autre experiance</button>
+                                </div>
+                            </div>
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-checkbox" for="center-of-interest">centre d'interet:</label>
+                                </div>
+                                <div class="input-group">
+                                    <textarea class="textarea-input" name="center-of-interest"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DIPLOM ET FORMATION ENDS -->
+
+                        <div class="form-border">
+                            <h2 class="heading-title-formSignup">connaissance general</h2>
+                            <table class="table">
+                               <thead>
+                                   <tr>
+                                       <th class="main-column">connaissence en:</th>
+                                       <th class="regular-column">base</th>
+                                       <th class="regular-column">moyenne</th>
+                                       <th class="regular-column">bonne</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                    <tr>
+                                        <td class="main-column">Juridiaue (société)</td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="base" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="moyenne" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="bonne" class="chechbox-input">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="main-column">Social</td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="base" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="moyenne" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="bonne" class="chechbox-input">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="main-column">Finance & Comptabilité</td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="base" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="moyenne" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="bonne" class="chechbox-input">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="main-column">Audit & Control Interne</td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="base" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="moyenne" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="bonne" class="chechbox-input">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="main-column">Fiscalité</td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="base" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="moyenne" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="bonne" class="chechbox-input">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="main-column">Managment/Commercial</td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="base" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="moyenne" class="chechbox-input">
+                                        </td>
+                                        <td class="regular-column">
+                                            <input type="checkbox" name="bonne" class="chechbox-input">
+                                        </td>
+                                    </tr>
+                               </tbody>
+                              </table>
+                        </div>
+
+                        <div class="form-border">
+                            <h2 class="heading-title-formSignup">informatique</h2>
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-checkbox" for="name">Avez-vous un ordinateur a votre disposition ?</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="checkbox" name="computer" class="chechbox-input">
+                                    <label class="label-checkbox" for="computer">OUI</label>
+                                    <input type="checkbox" name="no-computer" class="chechbox-input">
+                                    <label class="label-checkbox" for="no-computer">NON</label>
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-checkbox" for="name">Utilisez-vous internet ?</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="checkbox" name="internet" class="chechbox-input">
+                                    <label class="label-checkbox" for="internet">OUI</label>
+                                    <input type="checkbox" name="cdd" class="chechbox-input">
+                                    <label class="label-checkbox" for="no-internet">NON</label>
+                                    <input type="checkbox" name="adsel" class="chechbox-input">
+                                    <label class="label-checkbox" for="adsel">ADSEL</label>
+                                    <input type="checkbox" name="4g" class="chechbox-input">
+                                    <label class="label-checkbox" for="4g">4G</label>
+                                </div>
+                            </div>
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-checkbox" for="name">Si vous avez de connaissance informatique, preciser ici ></label>
+                                </div>
+                                <div class="input-group">
+                                    <textarea class="textarea-input" name="computer-knowlage"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="register" value="inscrivez-moi à ce cours">
+                    </form>
+                </div>
+                <!-- new sign up form ends -->
+
+
+            </div>
+        </div>
+    </section>
+    <!-- services presentation starts -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

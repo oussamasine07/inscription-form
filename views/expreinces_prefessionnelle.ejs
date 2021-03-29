@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ee78fb64a1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display:wght@400;500;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>inscription</title>
+</head>
+<body>
+
+    <!-- services presentation starts -->
+    <section class="formations-presentation py">
+        <div class="sign-up-section container-formation padding-20">
+            <!-- <h1 class="heading-main">inscrivez vous</h1>
+            <div class="inscription-btn-box padding-40">
+                <h1 class="heading-secondary">vous êtes-vous déjà inscrit?</h1>
+                <button class="sign-up-btn already-sign-up">oui, déja inscrit</button>
+                <button class="sign-up-btn sign-me-up">non, inscrivez mois</button> -->
+
+                <!-- new sign up form starts -->
+                <div class="new-sign-up-form" id="new-user">
+                    <form action="/experiences_prefessionnelle" method="POST">
+                        <!-- DIPLOM ET FORMATIONS STARTS -->
+                        <div class="form-border">
+                            <h2 class="heading-title-formSignup">experiences proffessionnelle:</h2>
+                            <div style="margin-bottom: 20px;" class="input-check">
+                                <div class="input-group-checkbox">
+                                    <label class="label-checkbox" for="emploi">condidat spontane</label>
+                                    <input type="checkbox" checked="true" id="condidat-spontaner" name="experience" value="condidat spontane" class="chechbox-input stage">
+                                </div>
+                            </div>
+                            <div id="experience">
+                                <div class="experience-container" id="experience-container">
+                                    <div class="input-check">
+                                        <div class="input-group-checkbox">
+                                            <label class="label-checkbox">stage</label>
+                                            <input type="checkbox" id="stage-1" name="experience" value="stage" class="chechbox-input stage">
+                                        </div>
+                                        <div class="input-group-checkbox">
+                                            <label class="label-checkbox" for="emploi">emplois</label>
+                                            <input type="checkbox" id="emploi-1" name="experience" value="emploi" class="chechbox-input stage">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox">debut de period:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="date" placeholder="debut" name="debut" class="input-form input-exp">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox">fin de period:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="date" placeholder="fin" name="fin" class="input-form input-exp">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox">nom de ste ou entreprise:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Ste ou Entreprise" name="nom_de_ste" class="input-form input-exp">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox">secteur:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="secteur" name="secteur" class="input-form input-exp">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox">departement:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="departement" name="departement" class="input-form input-exp">
+                                        </div>
+                                    </div>
+                                    <div class="row-input-2">
+                                        <div class="input-group">
+                                            <label class="label-checkbox" for="fonction">post ou fonction:</label>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="fonction" name="fonction" class="input-form input-exp">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-right-align">si vous avez d'autre experiances, merci d'ajouter</label>
+                                </div>
+                                <div class="input-group disabled">
+                                    <div class="disable-btn"></div>
+                                    <button class="add-other" id="add-experience" >ajouter une autre experiance</button>
+                                </div>
+                            </div>
+
+                            <div class="row-input-2">
+                                <div class="input-group">
+                                    <label class="label-checkbox" for="center-of-interest">centre d'interet:</label>
+                                </div>
+                                <div class="input-group">
+                                    <textarea class="textarea-input" name="centreDeInteret"></textarea>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- DIPLOM ET FORMATION ENDS -->
+                        <div class="input-btns">
+                            <input type="submit" class="input-form-btn next" value="suivant >>">
+                        </div>
+                    </form>
+                </div>
+                <!-- new sign up form ends -->
+            </div>
+        </div>
+    </section>
+    <!-- services presentation starts -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
