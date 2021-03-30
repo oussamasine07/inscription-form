@@ -1142,13 +1142,13 @@ app.post("/deja_inscrit", async (req, res) => {
         const OAuth2 = google.auth.OAuth2;
 
         const oauth2Client = new OAuth2 (
-            "719558470355-3runbqq5fd2p1utr3ogkl0qdtnfceq54.apps.googleusercontent.com",
-            "g7cTPd0Yl9NkNj5FeM5DrKYY",
+            "client id",
+            "client secret",
             "https://developers.google.com/oauthplayground"
         );
 
         oauth2Client.setCredentials({
-            refresh_token: "1//04p-nqBGTXJ6nCgYIARAAGAQSNwF-L9Irfv8LlWTIc3T1vqp5Z0Kr6vOq9yfyFWmWyAcMqSKwzcGP05EK2_Si6VN-RW5q_3uop18"
+            refresh_token: "refresh token"
        });
        const accessToken = oauth2Client.getAccessToken()
 
@@ -1156,10 +1156,10 @@ app.post("/deja_inscrit", async (req, res) => {
             service: "gmail",
             auth: {
                 type: "OAuth2",
-                user: "sineoussama@gmail.com", 
-                clientId: "719558470355-3runbqq5fd2p1utr3ogkl0qdtnfceq54.apps.googleusercontent.com",
-                clientSecret: "g7cTPd0Yl9NkNj5FeM5DrKYY",
-                refreshToken: `1//04p-nqBGTXJ6nCgYIARAAGAQSNwF-L9Irfv8LlWTIc3T1vqp5Z0Kr6vOq9yfyFWmWyAcMqSKwzcGP05EK2_Si6VN-RW5q_3uop18`,
+                user: "example@email.com", 
+                clientId: "client id",
+                clientSecret: "client secret",
+                refreshToken: `refresh token`,
                 accessToken: accessToken
             },
             tls: {
@@ -1224,10 +1224,4 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => { console.log(`app is running on port ${port}`)});
 
 
-// ------------------------------ M NODE MAILER ------------------------------ //
-// Client ID : 719558470355-3runbqq5fd2p1utr3ogkl0qdtnfceq54.apps.googleusercontent.com
-// Client Secret : g7cTPd0Yl9NkNj5FeM5DrKYY
-
-// refresh tocken : 1//04p-nqBGTXJ6nCgYIARAAGAQSNwF-L9Irfv8LlWTIc3T1vqp5Z0Kr6vOq9yfyFWmWyAcMqSKwzcGP05EK2_Si6VN-RW5q_3uop18
-// Access Tocken : ya29.a0AfH6SMAsxXzqqIKMz4IEwWhpj7atQXU7zSm3INeswIL8ZLoRk-hq85WtW2AXfYfvT9J2Vt9Z2MQYbyrtPxhCSwQOdX_yQZSwdFisjpHCtbG3BLy36q_zf3qQ6xcKhh3-zsuo5Y6PrgZSFaSZ5uW4VGG3gjLt
 
